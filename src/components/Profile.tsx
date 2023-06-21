@@ -4,10 +4,10 @@ import Header from "./Header"
 
 const Profile = () => {
   return (
-    <div>
-      <Header/>
-      <Coverimage/>
-      <Friends/>
+    <div className="profile-page-main">
+      <Header />
+      <Coverimage />
+      <Friends />
     </div>
   )
 }

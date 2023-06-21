@@ -8,7 +8,7 @@ const Header = () => {
         </div>
         <div className="container-2">
           <i className="fa-brands fa-facebook-messenger"></i>
-          <i className="fa-solid fa-bell"></i>
+          <i className="fa-solid fa-bell solidbtn"></i>
           <div className="profile-pic">
             <img
               className="profile-img"

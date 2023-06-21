@@ -75,12 +75,13 @@ const Login = () => {
             Forgotten password?
           </a>
           <div className="bottom-border-forgotpass"></div>
-            <div className="button-newaccount">
-              <button className="button-newaccount-submit" onClick={navigateclick}>
-                Create new account
-              </button>
+          <div className="button-newaccount">
+            <button className="button-newaccount-submit" onClick={navigateclick}>
+              Create new account
+            </button>
           </div>
         </form>
+        <p className="login-bellowtext"><strong>Create a Page</strong> for a celebrity, brand or business.</p>
       </div>
     </div>
   );

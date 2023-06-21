@@ -3,7 +3,7 @@ import Profile from "../components/Profile"
 const Profilepage = () => {
   return (
     <div>
-      <Profile/>
+      <Profile />
     </div>
   )
 }

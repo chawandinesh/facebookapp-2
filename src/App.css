@@ -14,6 +14,9 @@ body {
   padding-right: 5%;
   margin-left: 60px;
 }
+.profile-page-main{
+  overflow: hidden;
+}
 .heading {
   height: 0%;
   text-align: start;
@@ -80,6 +83,9 @@ body {
 .button-newaccount {
   padding-top: 0px;
   margin-top: 1px;
+}
+.login-bellowtext{
+  margin-top: 30px;
 }
 .button-newaccount-submit {
   background-color: #36a420;
@@ -263,6 +269,10 @@ body {
   display: block;
   text-align: left;
 }
+.error-message-signup{
+  color: #be5753 ;
+  padding: 15px;
+}
 .split1-signup {
   width: 170px;
   padding: 10px;
@@ -274,7 +284,11 @@ body {
 }
 .split1-signup-1 {
   height: 25px;
-  margin-right: 10px;
+}
+.split1-signup-2{
+  height: 25px;
+  margin-left: -20px;
+
 }
 .split2-signup {
   padding: 2px;
@@ -285,12 +299,12 @@ body {
   border-radius: 2px;
 }
 .split2-signup-1 {
-  width: 86.5%;
+  width: 90%;
   margin-left: 8px;
   height: 25px;
 }
 .split2-signup-2 {
-  width: 86.5%;
+  width: 90%;
   margin-left: 8px;
   height: 25px;
   margin-top: 13px;
@@ -303,13 +317,13 @@ body {
   margin-top: 25px;
 }
 .dob-head-signup {
-  margin: 9px;
-  font-size: 12px;
-  font-weight: normal;
-  line-height: 20px;
+  margin: 10px;
+  font-size: 15px;
   color: #606770;
   font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
-  margin-top: 9px;
+}
+.dateofbirth-signup{
+  display: flex;
 }
 .Signup-btn {
   background-color: #36a420;
@@ -327,14 +341,14 @@ body {
 }
 .gender-head-signup {
   margin: 9px;
-  font-size: 12px;
-  font-weight: normal;
-  line-height: 20px;
+  font-size: 15px;
   color: #606770;
   font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
-  margin-top: 9px;
 }
-.profile-main-page{
+.Gender-signup{
+  display: flex;
+}
+.profile-main-page {
   display: flex;
   flex-direction: column;
 }
@@ -402,14 +416,6 @@ body {
   margin-top: 20px;
   width: 400px;
   padding: 8px;
-  border-radius: 3px;
-}
-.container-2 {
-  background-color: white;
-  width: 550px;
-  height: 120px;
-  margin-top: 20px;
-  margin-left: 20px;
   border-radius: 3px;
 }
 .profile-img-container-2 {
@@ -530,29 +536,24 @@ body {
 .friends-heading1 {
   margin-left: 200px;
 }
-.header-class{
-  display:flex ;
+.header-class {
+  display: flex;
   justify-content: space-between;
   height: 55px;
   width: 100%;
   background-color: white;
   border-bottom: 1px solid #dddfe3;
-  top: 0;
+  margin: 0;
+  overflow:hidden;
 }
-.container-1{
+.container-1 {
   display: flex;
 }
-.title-header{
+.title-header {
   color: #1877f2;
   margin-top: -20px;
   margin-left: -180px;
   cursor: pointer;
-}
-.container-2{
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  width:150px;
 }
 .fa-brands {
   margin-top: -8px;
@@ -580,17 +581,17 @@ body {
   text-align: center;
   cursor: pointer;
 }
-.left-portion-proflepage{
+.left-portion-proflepage {
   width: 60px;
   background-color: white;
   border-bottom: 1px solid #dddfe3;
-  position: relative;
-  height:100vh;
-}
-.container-1{
+  height: 100vh;
   display: flex;
 }
-.coverimg{
+.container-1 {
+  display: flex;
+}
+.coverimg {
   display: flex;
   justify-content: center;
 }
@@ -603,17 +604,35 @@ body {
   margin-top: 0px;
   cursor: pointer;
 }
-.container-2{
+.container-2 {
   display: flex;
-  justify-content: space-evenly;
   flex-direction: row;
-  width:150px;
+  justify-content: space-evenly;
+  width: 130px;
+  margin-top: 15px;
 }
-.title-header{
+.container-2-homepage{
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+}
+.icon{
+  margin-left:-220px;
+}
+.bell{
+  margin-left: 8px;
+}
+.pic1{
+  margin-left: 8px;
+}
+.title-header {
   color: #1877f2;
   cursor: pointer;
 }
-.fa-search{
+.search-homepage::placeholder{
+  padding: 20px;
+}
+.fa-search {
   margin-top: -17px;
   margin-left: 14px;
   background-color: #f0f2f5;
@@ -627,22 +646,22 @@ body {
   color: #65676b;
   cursor: pointer;
 }
-.profile-img{
+.profile-img {
   height: 40px;
   width: 38px;
   border-radius: 25px;
   margin-top: -8px;
 }
-.Container-coverimg{
+.Container-coverimg {
   background-color: white;
   height: 650px;
   margin-left: 1px;
-  width:100%;
+  width: 100%;
 }
-.page1{
+.page1 {
   display: flex;
 }
-.profile-img2{
+.profile-img2 {
   height: 170px;
   margin-left: 175px;
   margin-top: -30px;
@@ -650,18 +669,18 @@ body {
   border: 4px solid #ffffff;
   cursor: pointer;
 }
-.img-des >h1{
+.img-des > h1 {
   font-family: inherit;
   margin-top: -130px;
   margin-left: 360px;
   cursor: default;
 }
-.img-des >p{
+.img-des > p {
   font-family: inherit;
   margin-top: -15px;
   margin-left: 360px;
 }
-.btn-profileimg{
+.btn-profileimg {
   display: flex;
   height: 36px;
   width: 450px;
@@ -676,7 +695,7 @@ body {
   border-radius: 6px;
   font-size: medium;
   cursor: pointer;
-} 
+}
 .editprofile-btn {
   width: 125px;
   border: none;
@@ -691,21 +710,21 @@ body {
   margin-top: 30px;
   margin-right: 130px;
 }
-.nav-tags-profile{
+.nav-tags-profile {
   display: flex;
 }
-.navigation-main-profile{
-  margin-left:170px;
+.navigation-main-profile {
+  margin-left: 170px;
   margin-top: 20px;
 }
-.nav-mainhead{
+.nav-mainhead {
   text-decoration: none;
   color: #65676b;
   margin-left: 20px;
   font-size: 18px;
   font-family: inherit;
 }
-.dot-btn{
+.dot-btn {
   border: none;
   border-radius: 8px;
   font-weight: bold;
@@ -788,4 +807,312 @@ body {
   flex-direction: row;
   justify-content: start;
   padding-left: 7px;
+}
+.container1-homepage {
+  display: flex;
+  margin-right: 500px;
+  flex-direction: row;
+}
+.search-homepage {
+  width: 590px;
+  height: 39px;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 20px;
+  border: none;
+  margin-left: 185px;
+  line-height: 5px;
+  background-color: #f0f2f5;
+  color: #434346;
+  outline: none;
+}
+.search-icon-home {
+  margin-top: 16px;
+  font-size: 20px;
+  color: #606770;
+}
+.left-portion-Homepage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.left-top-homepage {
+  display: flex;
+  flex-direction: column;
+}
+.left-top-1 {
+  display: flex;
+  flex-direction: row;
+}
+.house {
+  background-color: transparent;
+  color: #1877f2;
+  padding-top: 15px;
+  font-size: 18px;
+  margin-left: 12px;
+}
+.left-top-1 > p {
+  padding-top: 4px;
+  font-size: 16px;
+}
+.profile-img-homepage {
+  height: 24px;
+  width: 23px;
+  border-radius: 22px;
+  margin-left: 19px;
+}
+.name-home-left {
+  margin-top: -2px;
+  margin-left: 7px;
+}
+.line-homepage {
+  border-bottom: 1px solid #ced0d4;
+  width: 280px;
+  margin-left: 15px;
+}
+.video-logo-home {
+  margin-top: 12px;
+  font-size: 25px;
+  margin-left: 15px;
+}
+.watch-txt {
+  margin-left: 10px;
+  font-size: 25px;
+}
+.housebtn {
+  margin-left: 17px;
+  color: #1877f2;
+  font-size: 25px;
+  margin-top: 13px;
+}
+.icons-left{
+  margin-top: 5px;
+}
+.Marketplace-txt {
+  margin-top: -2px;
+  margin-left: 7px;
+}
+.gamingbtn{
+  margin-left: 17px;
+  color: #1877f2;
+  font-size: 25px;
+  margin-top: 13px;
+}
+.see-allbtn{
+  margin-left: 17px;
+  font-size: 25px;
+  margin-top: 13px;
+}
+.head-body-homepage {
+  background-color: white;
+  height: 300px;
+  width: 600px;
+  margin-right: 340px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+.head-feed-homepage {
+  display: flex;
+  justify-content: space-evenly;
+}
+.head-feed-homepage > h3 {
+  color: #65676b;
+}
+.head-body-middleline {
+  border-bottom: 0.1px solid #ced0d4;
+}
+.feed-body-main {
+  display: flex;
+}
+.body-feed-homepage {
+  display: flex;
+  flex-direction: row;
+  background-color: #ced0d4;
+  height: 200px;
+  width: 120px;
+  margin: 15px;
+  border-radius: 10px;
+}
+.middle2-homepage {
+  background-color: white;
+  height: 125px;
+  width: 600px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+.middle-head-homepage {
+  display: flex;
+}
+.profile-img-headfeed {
+  height: 40px;
+  width: 38px;
+  border-radius: 25px;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+.input-boxhead-home {
+  width: 510px;
+  height: 40px;
+  font-size: 15px;
+  border-radius: 20px;
+  margin-top: 10px;
+  border-radius: 20px;
+  margin-left: 10px;
+  border: none;
+  line-height: 5px;
+  background-color: #f0f2f5;
+  color: #434346;
+  outline: none;
+}
+.line-middlepage {
+  border-bottom: 1px solid #ced0d4;
+  width: 560px;
+  margin-top: 10px;
+  margin-left: 18px;
+}
+.txt-down {
+  display: flex;
+  justify-content: space-evenly;
+  color: #65676b;
+}
+.main-post-homepage{
+  height: 700px;
+  width: 600px;
+  background-color: white;
+  border-radius: 15px;
+  margin-top: 18px;
+}
+.head-main-post-homepage{
+  display: flex;
+}
+.head-text-homepage>p{
+margin-top: -3px;
+font-size: 17px;
+}
+.img-top-homepage{
+  height: 40px;
+  width: 40px;
+  border-radius: 25px;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+.img-top{
+  display: flex;
+}
+.img-top>p{
+margin-left: 8px;
+}
+.img-top>button{
+  margin-left: 350px;
+  font-size: 30px;
+  color: #65676b;
+  border: none;
+  outline: none;
+  background-color: white;
+  padding: none;
+  cursor: pointer;
+}
+.head-text-homepage{
+  padding: 15px;
+}
+.href-link{
+  text-decoration: none;
+  color: #1877f2;
+}
+.hash-tags{
+  color: #1877f2;
+}
+.img-main-post{
+  margin-top: -16px;
+  width: 100%;
+}
+.main-like{
+  display: flex;
+}
+.main-like>p{
+  color:#65676b;
+  margin-left: -6px;
+}
+.like-btn{
+  width: 18px;
+  padding: 13px;
+}
+.border-mainlike{
+  border-bottom: 1.2px solid #ced0d4;
+  width: 96%;
+  margin-left: 10px;
+  margin-top: -2px;
+}
+.like-symbols{
+  display: flex;
+  justify-content: space-around;
+}
+.symbol-gap{
+  padding: 10px;
+}
+.comment-section{
+  display: flex;
+}
+.img-comment-main{
+  height: 35px;
+  width: 34px;
+  border-radius: 30px;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+.input-commentbox{
+  width: 520px;
+  height: 34px;
+  margin-left: 4px;
+  margin-top: 12px;
+  border-radius: 20px;
+  border: none;
+  background-color: #f0f2f5;
+  color: #434346;
+  outline: none;
+}
+.right-section-homepage{
+  display: flex;
+}
+.topright-section-homepage{
+  margin-left: -350px;
+}
+.topright-section-homepage>h5{
+font-size: 18px;
+color: #646566;
+}
+.addtop-1{
+  display: flex;
+}
+.add-1{
+  height: 135px;
+  background-color: white;
+  border-radius: 10px;
+}
+.addtop-1>p{
+  margin-top: 50px;
+  margin-left: 6px;
+  color: #646566;
+}
+.add-2{
+  height: 135px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+.houseicon{
+  background-color: transparent;
+  margin: 10px;
+}
+.profile-img-profilepage{
+  height: 25px;
+  width: 24px;
+  border-radius: 24px;
+  margin-left: 16px;
+}
+.lineunder-profileleft{
+  margin-top: 18px;
+  border-bottom: 0.2px solid #ced0d4;
+  margin-left: 14px;
+  margin-right: 14px;
 }

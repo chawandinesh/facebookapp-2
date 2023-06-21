@@ -19,7 +19,7 @@ const Posts = () => {
         <button className="btn-container-1">Add featured</button>
         <br />
       </div>
-      <div className="container-2">
+      <div className="container-down">
         <img
           className="profile-img-container-2"
           src="https://scontent.fhyd5-1.fna.fbcdn.net/v/t39.30808-6/316296609_666230721811653_2313825525741665355_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Fh50dNPTWvgAX-maim4&_nc_ht=scontent.fhyd5-1.fna&oh=00_AfCPoVT2n1PL2YFMXXgmi4BKAxh6Al2-NJVO6MZIIX2hlA&oe=64743B9D"

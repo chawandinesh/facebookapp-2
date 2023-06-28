@@ -1,5 +1,7 @@
 import { useForm } from 'react-hook-form'
+import {useState} from 'react'
 import { yupResolver } from '@hookform/resolvers/yup';
+import axios from 'axios';
 import * as yup from "yup";
 
 const schema = yup.object({
@@ -30,21 +32,41 @@ const schema = yup.object({
     .matches(
       /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]+$/,
       'Password must contain at least one letter, one number, and one special character'
-    )
+    ),
+     dateOfBirth: yup.object().shape({
+      day: yup.string().required('Day is required'),
+      month: yup.string().required('Month is required'),
+      year: yup.string().required('Year is required')
+    }),
 
 });
 
-
-
-
 const SignUp = () => {
+  const [IsLoading,setIsLoading]= useState(false)
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema)
 
   });
-  console.log(errors)
-  const onSubmit = (values: any) => {
-    console.log(values)
+  const onSubmit = async (values: any) => {
+    setIsLoading(true)
+    try{
+  //  const response = axios.get("http://localhost:3001/users",values)
+
+      const response= await axios({
+        method:"post",
+        url:"http://localhost:3001/users",
+        data:values,
+      });
+      console.log(response.data);
+      alert("Form Submitted Successfully");
+      window.location.reload();
+    }
+    catch(errors){
+      console.log(errors);
+    }
+    finally{
+      setIsLoading(false);
+    }
   };
   return (
     <div className="main-signup">
@@ -97,21 +119,21 @@ const SignUp = () => {
           <label className="dob-head-signup">Date of birth</label>
           <div className='dateofbirth-signup'>
             <div className="Dob-signup">
-              <select className="date-signup">
+              <select className="date-signup" {...register('dateOfBirth.day')}>
                 {Array.from({ length: 31 }, (_, idx) => (
                   <option value={(idx + 1).toString()} key={idx}>
                     {idx + 1}
                   </option>
                 ))}
               </select>
-              <select className="day-signup">
+              <select className="day-signup" {...register('dateOfBirth.month')}>
                 {Array.from({ length: 12 }, (_, idx) => (
                   <option value={(idx + 1).toString()} key={idx}>
                     {['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][idx]}
                   </option>
                 ))}
               </select>
-              <select className="year-signup">
+              <select className="year-signup" {...register('dateOfBirth.year')}>
                 {Array.from({ length: 124 }, (_, idx) => {
                   const year = 2023 - idx;
                   return (
@@ -126,15 +148,15 @@ const SignUp = () => {
           <label className="gender-head-signup">Gender</label><br />
           <span className="Gender-signup">
             <div>
-              <input type="radio" name='gender'/>
+              <input type="radio" name="gender" value="Male" />
               <label>Male</label>
             </div>
             <div>
-              <input type="radio" name='gender'/>
+              <input type="radio" name="gender" value="Female"  />
               <label>Female</label>
             </div>
             <div>
-              <input type="radio" name='gender'/>
+              <input type="radio" name="gender" value="Other"   />
               <label>Other</label>
             </div>
           </span>
@@ -162,7 +184,7 @@ const SignUp = () => {
             . You may receive SMS notifications from us and can opt out at any
             time.
           </p>
-          <input className="Signup-btn" type="submit" value="Sign Up"></input>
+          <input className="Signup-btn" type="submit" disabled={IsLoading} value={IsLoading ? "Loading..." : "Sign Up"} />
         </form>
       </div>
     </div>

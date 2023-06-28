@@ -3,7 +3,8 @@ import Login from './pages/Login'
 import SignUp from './pages/SignUp'
 import ForgotPassword from './pages/ForgotPassword'
 import Home from './pages/HomePage'
-import Profile from './components/Profile'
+import Profile from './components/ProfilePage/Profile'
+import Friends from './components/ProfilePage/Friends'
 
 const AppRoutes = () => {
   return (
@@ -14,6 +15,7 @@ const AppRoutes = () => {
             <Route path='/signup' element={<SignUp/>}></Route>
             <Route path='/profile' element={<Profile/>}></Route>
             <Route path='/home' element={<Home/>}></Route>
+            <Route path='/Friends' element={<Friends/>}></Route>
             <Route path="/" element={<Navigate to="/login" />}></Route>
         </Routes>
     </Router>

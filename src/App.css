@@ -84,9 +84,6 @@ body {
   padding-top: 0px;
   margin-top: 1px;
 }
-.login-bellowtext{
-  margin-top: 30px;
-}
 .button-newaccount-submit {
   background-color: #36a420;
   color: white;
@@ -100,6 +97,10 @@ body {
   padding: 0 16px;
   font-weight: bold;
 }
+.login-bellowtext{
+  margin-top: 30px;
+}
+
 .header-forgotpass {
   font-family: inherit;
   display: flex;
@@ -200,7 +201,7 @@ body {
   height: 50px;
   text-align: left;
   font-size: 16px;
-  color: transparent;
+  color: black;
   border-radius: 5px;
   border-width: 1px;
   border-color: #959ba7;
@@ -430,7 +431,7 @@ body {
   margin-left: 250px;
   padding: 10px;
   border-radius: 8px;
-  margin-top: -80px;
+  margin-top: 20px;
 }
 .nav-tags {
   text-decoration: none;
@@ -541,6 +542,9 @@ body {
   justify-content: space-between;
   height: 55px;
   width: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 999;
   background-color: white;
   border-bottom: 1px solid #dddfe3;
   margin: 0;
@@ -554,6 +558,7 @@ body {
   margin-top: -20px;
   margin-left: -180px;
   cursor: pointer;
+ 
 }
 .fa-brands {
   margin-top: -8px;
@@ -587,6 +592,8 @@ body {
   border-bottom: 1px solid #dddfe3;
   height: 100vh;
   display: flex;
+  position: fixed;
+  margin-top: 55px;
 }
 .container-1 {
   display: flex;
@@ -603,6 +610,9 @@ body {
   margin-right: auto;
   margin-top: 0px;
   cursor: pointer;
+}
+.title-decoration{
+  text-decoration: none;
 }
 .container-2 {
   display: flex;
@@ -651,12 +661,14 @@ body {
   width: 38px;
   border-radius: 25px;
   margin-top: -8px;
+  cursor: pointer;
 }
 .Container-coverimg {
   background-color: white;
   height: 650px;
-  margin-left: 1px;
   width: 100%;
+  margin-left: 61px;
+  margin-top: 55px;
 }
 .page1 {
   display: flex;
@@ -832,13 +844,18 @@ body {
   color: #606770;
 }
 .left-portion-Homepage {
+  position: absolute;
+  left:350px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  
+  
 }
-.left-top-homepage {
-  display: flex;
-  flex-direction: column;
+.side-section{
+background-color: #ffffff;
+position: fixed;
+margin-top: 55px;
+height: 100vh;
+  
 }
 .left-top-1 {
   display: flex;
@@ -854,12 +871,14 @@ body {
 .left-top-1 > p {
   padding-top: 4px;
   font-size: 16px;
+  cursor: pointer;
 }
 .profile-img-homepage {
   height: 24px;
   width: 23px;
   border-radius: 22px;
   margin-left: 19px;
+  cursor: pointer;
 }
 .name-home-left {
   margin-top: -2px;
@@ -874,16 +893,19 @@ body {
   margin-top: 12px;
   font-size: 25px;
   margin-left: 15px;
+  cursor: pointer;
 }
 .watch-txt {
   margin-left: 10px;
   font-size: 25px;
+  cursor: pointer;
 }
 .housebtn {
   margin-left: 17px;
   color: #1877f2;
   font-size: 25px;
   margin-top: 13px;
+  cursor: pointer;
 }
 .icons-left{
   margin-top: 5px;
@@ -891,17 +913,20 @@ body {
 .Marketplace-txt {
   margin-top: -2px;
   margin-left: 7px;
+  cursor: pointer;
 }
 .gamingbtn{
   margin-left: 17px;
   color: #1877f2;
   font-size: 25px;
   margin-top: 13px;
+  cursor: pointer;
 }
 .see-allbtn{
   margin-left: 17px;
   font-size: 25px;
   margin-top: 13px;
+  cursor: pointer;
 }
 .head-body-homepage {
   background-color: white;
@@ -931,6 +956,17 @@ body {
   height: 200px;
   width: 120px;
   margin: 15px;
+  border-radius: 10px;
+}
+.after-like{
+ color: #1877f2;
+ background-color: transparent;
+ border: transparent;
+ font-size: 20px;
+}
+.img{
+  height: 200px;
+  width: 120px;
   border-radius: 10px;
 }
 .middle2-homepage {
@@ -976,14 +1012,16 @@ body {
   color: #65676b;
 }
 .main-post-homepage{
-  height: 700px;
+  height: auto;
   width: 600px;
   background-color: white;
   border-radius: 15px;
   margin-top: 18px;
+  padding-bottom: 10px;
 }
 .head-main-post-homepage{
   display: flex;
+
 }
 .head-text-homepage>p{
 margin-top: -3px;
@@ -1025,6 +1063,8 @@ margin-left: 8px;
 .img-main-post{
   margin-top: -16px;
   width: 100%;
+  /* height: 320px; */
+  cursor: pointer;
 }
 .main-like{
   display: flex;
@@ -1033,9 +1073,39 @@ margin-left: 8px;
   color:#65676b;
   margin-left: -6px;
 }
-.like-btn{
+.like-btn-post{
   width: 18px;
   padding: 13px;
+}
+.like-btn-name{
+  margin-top: 10px;
+}
+.like-symbol{
+  margin-top: 6px;
+}
+.like-btn{
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+}
+.comment-btn{
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+}
+.share-btn{
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+}
+.share-symbol{
+  margin-top: 7px;
+}
+.comment-symbol{
+  margin-top: 7px;
 }
 .border-mainlike{
   border-bottom: 1.2px solid #ced0d4;
@@ -1043,12 +1113,12 @@ margin-left: 8px;
   margin-left: 10px;
   margin-top: -2px;
 }
-.like-symbols{
+.like-symbol{
+  display: flex;
+}
+.post-btns{
   display: flex;
   justify-content: space-around;
-}
-.symbol-gap{
-  padding: 10px;
 }
 .comment-section{
   display: flex;
@@ -1071,11 +1141,21 @@ margin-left: 8px;
   color: #434346;
   outline: none;
 }
+.feed-maincontent-homepage{
+  margin-right: 40px;
+  margin-top: 55px;
+}
 .right-section-homepage{
   display: flex;
+  margin-left: 70px;
+  margin-top: 50px;
+  height: 100vh;
 }
+
 .topright-section-homepage{
   margin-left: -350px;
+  position: fixed;
+  height: 100vh;
 }
 .topright-section-homepage>h5{
 font-size: 18px;

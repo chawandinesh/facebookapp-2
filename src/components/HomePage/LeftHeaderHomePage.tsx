@@ -1,18 +1,23 @@
+import { useNavigate } from "react-router-dom";
 import { FcVideoFile } from "react-icons/fc";
 import { GiDogHouse } from "react-icons/gi";
 import { CgGames } from "react-icons/cg";
 import { BsFillGrid3X3GapFill } from "react-icons/bs";
 const LeftHeaderHomePage = () => {
+  const navigate = useNavigate();
+  const navigateclick = () => {
+    navigate('/profile');
+  };
   return (
-    <div className="left-top-homepage">
+    <div className="side-section">
       <div className="left-top-1">
         <i className="fa-solid fa-house house"></i>
         <p>Home</p>
       </div>
       <div className="left-top-1">
-        <img
+        <img onClick={navigateclick}
           className="profile-img-homepage"
-          src="https://scontent.fhyd5-1.fna.fbcdn.net/v/t39.30808-6/316296609_666230721811653_2313825525741665355_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=VFpusCRxd3EAX_rCZuF&_nc_ht=scontent.fhyd5-1.fna&oh=00_AfC3GEd8CRB7IdGJsbOheJ0zR0qG59YHGl4B7wWbUhtYHg&oe=648DF0DD"
+          src="https://scontent.fhyd5-1.fna.fbcdn.net/v/t39.30808-6/316296609_666230721811653_2313825525741665355_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=k6tuWGLRZs4AX8gZJc5&_nc_ht=scontent.fhyd5-1.fna&oh=00_AfAZVYK0phB0k22Nj1W7Acti_gcsUk7tBg8FJHOIH8Ui-g&oe=6499CE5D" alt="profileimg"
         />
         <p className="name-home-left">Pavan Kothapalli</p>
       </div>

@@ -30,13 +30,11 @@ const ForgotPassword = () => {
                 Please enter your email address or mobile number to search<br />
                 for your account.
               </p>
-              <form>
                 <input
                   type="text"
                   className="textbox-forgotpass"
                   placeholder="Email address or mobile number"
-                />
-              </form><br />
+                /><br />
               <div className="container-forgotpass-border"></div><br />
               <div className="buttons-forgotpass">
                 <button className="button-cancel-forgotpass">Cancel</button>

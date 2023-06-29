@@ -3,6 +3,7 @@ import LikeFeedPost from "./LikeFeedPost"
 
 
 const HomeMiddle3:React.FC<any> = (props) => {
+
     return (
         <div className="main-post-homepage">
             <div className="head-main-post-homepage">
@@ -17,7 +18,7 @@ const HomeMiddle3:React.FC<any> = (props) => {
                  <p className="hash-tags">{props.Hashtags}</p>
             </div>
             <div>
-                <img className="img-main-post" src={props.mainpost}/>
+                <img className="img-main-post" src={props.mainpost} />
             </div>
             <LikeFeedPost/>
             <CommentSection/>

@@ -1,36 +1,66 @@
 import { useNavigate } from "react-router-dom";
-import usedata from "../assets/Validation.json";
-import { useState } from "react";
+import { useForm } from 'react-hook-form'
+import { useEffect, useState } from "react";
+import axios from 'axios';
+
 
 const Login = () => {
-  const [data, setData] = useState({ Email: "", password: "" });
+  const [usersData, setUsersData] = useState({
+    loading: false,
+    error: false,
+    data: []
+  })
+
+  const { register, handleSubmit, formState: { errors } } = useForm()
+
   const navigate = useNavigate();
   const navigateclick = () => {
     navigate("/SignUp");
   };
 
-  const navigatehome = () => {
-    navigate("/home");
-  };
-  const setdata = (e: any) => {
-    setData({ ...data, [e.target.name]: e.target.value });
-    console.log(data);
-  };
-  let submit = () => {
-    console.log(data);
-    let isValid = false;
+  const submit = (data: any) => {
+  
+    const Email = data?.Email;
+    const password = data?.password;
 
-    usedata.map((item) => {
-      if (data.Email === item.Email && data.password === item.password) {
-        isValid = true;
+
+    const checkEmail = usersData.data.some((each: any) => each?.mobile_or_EmailId === Email)
+
+    if (!checkEmail) {
+      alert("This Email is not Registered")
+    }
+    else {
+      const checkPassword = usersData.data.find((each: any) => each?.newPassword === password&& each?.mobile_or_EmailId === Email)
+      if (!checkPassword) {
+        alert("Incorrect Password")
       }
-    });
-    if (isValid) {
-      navigatehome();
-    } else {
-      alert("Enter a valid email and password");
+      else {
+        navigate('/home')
+      }
     }
   };
+  const getusers = async () => {
+    setUsersData({ ...usersData, loading: true })
+    try {
+      const response = await axios({
+        method: "GET",
+        url: "http://localhost:3001/users"
+      })
+      if (response.status === 200) {
+        setUsersData({ ...usersData, loading: false, data: response.data })
+      }
+    } catch (error) {
+      setUsersData({ ...usersData, loading: false, error: true, data: [] })
+
+
+    }
+  }
+
+  useEffect(() => {
+    getusers()
+  }, [])
+
+
 
   return (
     <div className="login-page">
@@ -45,28 +75,29 @@ const Login = () => {
         <form className="login-Rightcontent">
           <input
             type="text"
-            name="Email"
+
+            {...register("Email")}
             className="Login-box"
             placeholder="Email address or phone number"
             id="email"
-            onChange={setdata}
+
           />
           <br />
           <br />
           <input
             type="password"
-            name="password"
+            {...register("password")}
             className="Login-box"
             placeholder="Password"
             id="pass"
-            onChange={setdata}
+
           />
           <br />
           <br />
           <input
             type="button"
             className="Login-submit"
-            onClick={submit}
+            onClick={handleSubmit(submit)}
             value="Log in"
           />
           <br />

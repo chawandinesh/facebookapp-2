@@ -3,6 +3,7 @@ import {useState} from 'react'
 import { yupResolver } from '@hookform/resolvers/yup';
 import axios from 'axios';
 import * as yup from "yup";
+import { useNavigate } from 'react-router-dom';
 
 const schema = yup.object({
   firstname: yup.string()
@@ -17,7 +18,7 @@ const schema = yup.object({
     .max(50, 'Last name cannot exceed 50 characters')
     .matches(/^[A-Za-z]+$/, 'Last name should only contain alphabetic characters'),
 
-  mobile: yup.string()
+  mobile_or_EmailId: yup.string()
     .required('Mobile number or Password is required')
     .test('valid-contact', 'Invalid contact information', function (value) {
       const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
@@ -38,15 +39,17 @@ const schema = yup.object({
       month: yup.string().required('Month is required'),
       year: yup.string().required('Year is required')
     }),
+    gender: yup.string().required('Gender is required'),
 
 });
 
 const SignUp = () => {
   const [IsLoading,setIsLoading]= useState(false)
-  const { register, handleSubmit, formState: { errors } } = useForm({
+  const { register, handleSubmit,reset,formState: { errors } } = useForm({
     resolver: yupResolver(schema)
 
   });
+  const navigate = useNavigate()
   const onSubmit = async (values: any) => {
     setIsLoading(true)
     try{
@@ -58,8 +61,14 @@ const SignUp = () => {
         data:values,
       });
       console.log(response.data);
-      alert("Form Submitted Successfully");
-      window.location.reload();
+      if(response.status===201){
+        alert("Sucessfully Registered");
+        reset();
+        navigate('/login')
+
+      }
+    
+
     }
     catch(errors){
       console.log(errors);
@@ -101,10 +110,10 @@ const SignUp = () => {
               <input
                 className="split2-signup-1"
                 type="text"
-                {...register('mobile')}
+                {...register('mobile_or_EmailId')}
                 placeholder="Mobile number or email address"
               />
-              <small className='error-message-signup'>{errors.mobile?.message}</small>
+              <small className='error-message-signup'>{errors.mobile_or_EmailId?.message}</small>
             </div>
             <div>
               <input
@@ -148,15 +157,15 @@ const SignUp = () => {
           <label className="gender-head-signup">Gender</label><br />
           <span className="Gender-signup">
             <div>
-              <input type="radio" name="gender" value="Male" />
+              <input type="radio" value="Male" {...register('gender')} />
               <label>Male</label>
             </div>
             <div>
-              <input type="radio" name="gender" value="Female"  />
+              <input type="radio"  value="Female" {...register('gender')} />
               <label>Female</label>
             </div>
             <div>
-              <input type="radio" name="gender" value="Other"   />
+              <input type="radio"  value="Other"  {...register('gender')} />
               <label>Other</label>
             </div>
           </span>

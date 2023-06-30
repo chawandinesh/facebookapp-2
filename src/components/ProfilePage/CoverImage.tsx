@@ -9,13 +9,13 @@ const CoverImage = () => {
         <div className="coverimg">
           <img
             className="cover-img"
-            src="https://scontent.fhyd5-1.fna.fbcdn.net/v/t1.6435-9/119139264_156207396147324_2672178145281449554_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=e3f864&_nc_ohc=uN0ZAC_oXrAAX_bv5IX&_nc_ht=scontent.fhyd5-1.fna&oh=00_AfCSbU8agld5vRrx8AFDqCiuAwpaYaxXMbLb9fkR7-p08w&oe=6497949C" alt="coverimg"
+            src="https://scontent.fhyd5-1.fna.fbcdn.net/v/t1.6435-9/119139264_156207396147324_2672178145281449554_n.jpg?_nc_cat=103&cb=99be929b-59f725be&ccb=1-7&_nc_sid=e3f864&_nc_ohc=X5uvhPsJtRYAX9Fhe3Z&_nc_ht=scontent.fhyd5-1.fna&oh=00_AfAa2KSNzgYfrnTSmyXBd9aeufdyHnhE71ER-dan11Zf6g&oe=64C6299C" alt="coverimg"
           />
         </div>
         <div className="bottom-coverimg">
           <img
             className="profile-img2"
-            src="https://scontent.fhyd5-1.fna.fbcdn.net/v/t39.30808-6/316296609_666230721811653_2313825525741665355_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=k6tuWGLRZs4AX8gZJc5&_nc_ht=scontent.fhyd5-1.fna&oh=00_AfAZVYK0phB0k22Nj1W7Acti_gcsUk7tBg8FJHOIH8Ui-g&oe=6499CE5D" alt="profileimg"
+            src="https://scontent.fhyd5-1.fna.fbcdn.net/v/t39.30808-6/316296609_666230721811653_2313825525741665355_n.jpg?_nc_cat=109&cb=99be929b-59f725be&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=JGOAXYrFdmEAX-DEGOm&_nc_ht=scontent.fhyd5-1.fna&oh=00_AfDjjWh_VzKQP1QO0f0wWd5yV_uFtY0rxXRHx7R-r6wD3Q&oe=64A3B19D" alt="profileimg"
           />
         </div>
         <div className="img-des">

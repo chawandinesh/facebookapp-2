@@ -1,26 +1,24 @@
-import {useState} from 'react'
-import { BsChatLeft, BsHandThumbsUp, BsArrow90DegRight } from "react-icons/bs"; 
-import {useNavigate} from 'react-router-dom'
+import { useState } from 'react'
+import { BsChatLeft, BsHandThumbsUp, BsArrow90DegRight } from "react-icons/bs";
 
 const LikeFeedPost = () => {
-    const[count,setCount] = useState(0)
-    const[color,setColor] = useState(false)
+    const [count, setCount] = useState(0)
+    const [color, setColor] = useState(false)
+    // const [comment,setComment] = useState({
+    //     comments:[],
+    //     comment:false
+    // })
 
-    const handleClick=()=>{
+    const handleClick = () => {
         setColor(!color)
-        if(color){
-            
-            setCount(prevCount=>prevCount-1)
-        }else{
-            setCount(prevCount=>prevCount+1)
+        if (color) {
+
+            setCount(prevCount => prevCount - 1)
+        } else {
+            setCount(prevCount => prevCount + 1)
         }
     }
-    const navigate= useNavigate();
-    const handleComment=()=>{
-    navigate('/comments')
-    } 
-    
-     
+
     return (
         <div className="like-post">
             <div className="main-like">
@@ -30,17 +28,16 @@ const LikeFeedPost = () => {
             <div className="border-mainlike"></div>
             <div className="post-btns">
                 <div className="like-symbol">
-                    <button className={color?"after-like":"like-btn"} onClick={handleClick}><BsHandThumbsUp /></button><span className="like-btn-name">Like</span>
+                    <button className={color ? "after-like" : "like-btn"} onClick={handleClick}><BsHandThumbsUp /></button><span className="like-btn-name">Like</span>
                 </div>
                 <div className="comment-symbol">
-                    <button className="comment-btn" onClick={handleComment}><BsChatLeft /></button><span className="comment-btn-name">Comment</span>
+                    <button className="comment-btn" ><BsChatLeft /></button><span className="comment-btn-name">Comment</span>
                 </div>
                 <div className="share-symbol">
                     <button className="share-btn"><BsArrow90DegRight /></button><span className="share-btn-name">Share</span>
                 </div>
             </div>
             <div className="border-mainlike"></div>
-
         </div>
     )
 }

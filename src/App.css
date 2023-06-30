@@ -851,7 +851,7 @@ body {
   
 }
 .side-section{
-background-color: #ffffff;
+background-color: #f0f2f5;
 position: fixed;
 margin-top: 55px;
 height: 100vh;
@@ -1141,6 +1141,12 @@ margin-left: 8px;
   color: #434346;
   outline: none;
 }
+.comments-list{
+  margin-left: -500px;
+  margin-top: 50px;
+  color: #434346;
+}
+
 .feed-maincontent-homepage{
   margin-right: 40px;
   margin-top: 55px;

@@ -1,3 +1,4 @@
+import Friends from "./Friends"
 
 const RightSectionHome = () => {
   return (
@@ -12,6 +13,7 @@ const RightSectionHome = () => {
           <img className="add-2" src="https://cdn.shopify.com/s/files/1/0137/0292/2286/products/supernova-black_1_400x.png?v=1673500420" alt="img-watch" />
           <p>Fire-Boltt</p>
         </div>
+        <Friends/>
       </div>
 
     </div>

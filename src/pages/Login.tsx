@@ -3,34 +3,30 @@ import { useForm } from 'react-hook-form'
 import { useEffect, useState } from "react";
 import axios from 'axios';
 
-
 const Login = () => {
   const [usersData, setUsersData] = useState({
     loading: false,
     error: false,
     data: []
   })
-
   const { register, handleSubmit, formState: { errors } } = useForm()
-
+  console.log(errors)
   const navigate = useNavigate();
   const navigateclick = () => {
     navigate("/SignUp");
   };
 
   const submit = (data: any) => {
-  
+
     const Email = data?.Email;
     const password = data?.password;
-
-
     const checkEmail = usersData.data.some((each: any) => each?.mobile_or_EmailId === Email)
 
     if (!checkEmail) {
       alert("This Email is not Registered")
     }
     else {
-      const checkPassword = usersData.data.find((each: any) => each?.newPassword === password&& each?.mobile_or_EmailId === Email)
+      const checkPassword = usersData.data.find((each: any) => each?.newPassword === password && each?.mobile_or_EmailId === Email)
       if (!checkPassword) {
         alert("Incorrect Password")
       }
@@ -51,16 +47,12 @@ const Login = () => {
       }
     } catch (error) {
       setUsersData({ ...usersData, loading: false, error: true, data: [] })
-
-
     }
   }
 
   useEffect(() => {
     getusers()
   }, [])
-
-
 
   return (
     <div className="login-page">
@@ -80,7 +72,6 @@ const Login = () => {
             className="Login-box"
             placeholder="Email address or phone number"
             id="email"
-
           />
           <br />
           <br />
@@ -90,7 +81,6 @@ const Login = () => {
             className="Login-box"
             placeholder="Password"
             id="pass"
-
           />
           <br />
           <br />
@@ -112,7 +102,7 @@ const Login = () => {
             </button>
           </div>
         </form>
-        <p className="login-bellowtext"><strong>Create a Page</strong> for a celebrity, brand or business.</p>
+        <p className="login-bellowtext"><strong>Create a Page</strong>for a celebrity, brand or business.</p>
       </div>
     </div>
   );

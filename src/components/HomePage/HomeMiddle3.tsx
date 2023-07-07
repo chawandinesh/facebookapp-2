@@ -24,8 +24,6 @@ const HomeMiddle3: React.FC<any> = (props) => {
         </div>
     )
 }
-
-
 // <!-- Scrollable modal -->
 // <div className="modal-dialog modal-dialog-scrollable">
 //   

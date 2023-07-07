@@ -11,7 +11,7 @@ const LeftHeaderHomePage = () => {
   return (
     <div className="side-section">
       <div className="left-top-1">
-        <i className="fa-solid fa-house house"></i>
+      <a href="/home" className="navigate-home"><i className="fa-solid fa-house house"></i></a>
         <p>Home</p>
       </div>
       <div className="left-top-1">

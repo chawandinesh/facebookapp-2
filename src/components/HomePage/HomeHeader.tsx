@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import LeftHeaderHomePage from "./LeftHeaderHomePage";
 import FeedSectionHome from "./FeedSectionHome";
 import RightSectionHome from "./RightSectionHome";
-import storiesdata from "../../assets/StoriesHome.json"
+import storiesdata from "../../assets/StoriesHome.json";
 
 const HomeHeader = () => {
   const navigate = useNavigate();

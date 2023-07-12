@@ -1,7 +1,8 @@
 import Header from "../Header";
 import LeftProfilepage from "../ProfilePage/LeftProfilepage";
 import FriendRequest from "./FriendRequest";
-import Friendrequest from "../../assets/FriendRejuest.json";
+import Friendrequest from "../../assets/FriendRequest.json"
+import MutualFriends from "./MutualFriends";
 
 const ManageFriends = () => {
   return (
@@ -18,9 +19,12 @@ const ManageFriends = () => {
               key={index}
               src={item.src}  
               Name={item.Name}
+              btn1={item.conform}
+              btn2={item.delete}
             />
           ))}
         </div>
+        <MutualFriends/>
       </div>
     </div>
     </div>

@@ -7,6 +7,7 @@ import Profile from './components/ProfilePage/Profile'
 import Friends from './components/ProfilePage/Friends'
 import CommentSection from './components/HomePage/CommentSection'
 import ManageFriends from './components/HomePage/ManageFriends'
+import ErrorPage from './pages/ErrorPage'
 
 const AppRoutes = () => {
   return (
@@ -21,6 +22,8 @@ const AppRoutes = () => {
             <Route path='/comments' element={<CommentSection/>}></Route>
             <Route path='/managefriends' element={<ManageFriends/>}></Route>
             <Route path="/" element={<Navigate to="/login" />}></Route>
+            <Route path='*' element={<ErrorPage/>}></Route>
+
         </Routes>
     </Router>
   )

@@ -6,20 +6,20 @@ const FriendRequest: React.FC<any> = (props) => {
   const [showConfirmButton, setShowConfirmButton] = useState(true);
   const [requestAccepted, setRequestAccepted] = useState(false);
 
-  const handleConfirmClick = async () => {
-    setShowConfirmButton(false);
-    setRequestAccepted(true);
+  // const handleConfirmClick = async () => {
+  //   setShowConfirmButton(false);
+  //   setRequestAccepted(true);
 
-    const friendName = {name: props.Name};
+  //   const friendName = {name: props.Name};
 
-    // sending friend name to the JSON server
-    try {
-      const response = await axios.post('http://localhost:3001/friends', friendName)
-      console.log('Friend name stored in JSON server:', response.data);
-    } catch (error) {
-      console.error('Error storing friend name:', error);
-    }
-  };
+  //   // sending friend name to the JSON server
+  //   try {
+  //     const response = await axios.post('http://localhost:3001/friends', friendName)
+  //     console.log('Friend name stored in JSON server:', response.data);
+  //   } catch (error) {
+  //     console.error('Error storing friend name:', error);
+  //   }
+  // };
 
   const handleDeleteClick = () => {
     setShowRequest(false);
@@ -36,7 +36,7 @@ const FriendRequest: React.FC<any> = (props) => {
           <img className="image-container" src={props.src} alt="Profile" />
           <h3 className="image-name-container">{props.Name}</h3>
           {showConfirmButton && (
-            <button className="btn-conform-request" style={props.buttonStyle} onClick={handleConfirmClick}>
+            <button className="btn-conform-request" style={props.buttonStyle} onClick={props.handleClick1}>
            {props.btn1}
             </button> 
           )}

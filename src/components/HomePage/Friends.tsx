@@ -1,4 +1,3 @@
-
 const Friends = () => {
   return (
     <div className="friends-homepage">
@@ -8,4 +7,4 @@ const Friends = () => {
   )
 }
 
-export default Friends
+export default Friends;

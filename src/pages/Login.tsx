@@ -31,6 +31,13 @@ const Login = () => {
         alert("Incorrect Password")
       }
       else {
+        const currentUser:any=  usersData.data.find((each: any) => {
+          if(each?.mobile_or_EmailId === Email){
+            return each
+          }
+        })
+        localStorage.setItem("current userId", currentUser.id) 
+        
         navigate('/home')
       }
     }

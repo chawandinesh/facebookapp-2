@@ -597,7 +597,7 @@ body {
   cursor: pointer;
 }
 .left-portion-proflepage {
-  width: 60px;
+  width: 4%;
   background-color: white;
   border-bottom: 1px solid #dddfe3;
   height: 100vh;
@@ -1134,10 +1134,12 @@ body {
 }
 .leftsection-Managefriends {
   position: sticky;
-  width: 720px;
+  width: 350px;
   background-color: white;
-  margin-left: 60px;
+  color: #1c1e21;
+  margin-left: 56px;
   border-left: 1px solid #ced0d4;
+  margin-top: 55px;
 }
 .rightsection-Managefriends{
   display: flex;
@@ -1153,6 +1155,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-left: 20px;
+  width: 1000px;
 }
 .share-symbol {
   margin-top: 7px;
@@ -1304,7 +1307,7 @@ body {
   display: flex;
 }
 .heading-mutualfriends a{
-  margin-left: 800px;
+  margin-left: 760px;
   margin-top: 18px;
   text-decoration: none;
   color: #1877f2;
@@ -1313,4 +1316,48 @@ body {
 body.error-page{
   background-color: #e4e6eb;
   color: black;
+}
+.video-logo-home2{
+  font-size: 25px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.housebtn-profile{
+  margin-left: 15px;
+  color: #1877f2;
+  font-size: 22px;
+  cursor: pointer;
+}
+.gamingbtn2{
+  margin-left: 15px;
+  color: #1877f2;
+  font-size: 25px;
+  cursor: pointer;
+}
+.see-allbtn2{
+  margin-left: 15px;
+  font-size: 22px;
+  margin-top: 13px;
+  cursor: pointer;
+}
+.headings-left-managefriends{
+  margin-left: 15px;
+  font-size: 14px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:#7d7d7d ;
+}
+.headings-left-managefriends h2 {
+  height: 35px;
+}
+.headings-left-managefriends h2:hover{
+  width: 90%;
+  height: 35px;
+  border-radius: 7px;
+  background-color: #f0f2f5 ;
+  transform: translateZ(0);
+}
+.leftsection-Managefriends h1{
+  margin-left: 15px;
+  font-size: 26px;
+  font-family:serif;
 }

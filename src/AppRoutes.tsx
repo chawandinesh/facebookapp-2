@@ -6,7 +6,7 @@ import Home from './pages/HomePage'
 import Profile from './components/ProfilePage/Profile'
 import Friends from './components/ProfilePage/Friends'
 import CommentSection from './components/HomePage/CommentSection'
-import ManageFriends from './components/HomePage/ManageFriends'
+import ManageFriends from './pages/ManageFriends'
 import ErrorPage from './pages/ErrorPage'
 
 const AppRoutes = () => {

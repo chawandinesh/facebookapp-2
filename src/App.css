@@ -1345,6 +1345,7 @@ body.error-page{
   font-size: 14px;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color:#7d7d7d ;
+  cursor: pointer;
 }
 .headings-left-managefriends h2 {
   height: 35px;

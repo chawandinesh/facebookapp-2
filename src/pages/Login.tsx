@@ -109,7 +109,7 @@ const Login = () => {
             </button>
           </div>
         </form>
-        <p className="login-bellowtext"><strong>Create a Page</strong>for a celebrity, brand or business.</p>
+        <p className="login-bellowtext"><strong>Create a Page</strong> for a celebrity, brand or business.</p>
       </div>
     </div>
   );
